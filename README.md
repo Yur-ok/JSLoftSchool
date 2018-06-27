@@ -1,0 +1,2 @@
+# JSLoftSchool
+Studing JS basics
