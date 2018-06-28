@@ -41,12 +41,21 @@ function isAllTrue(num, fn) {
 
     }
 
+    let isTrue = 0;
+    let isFalse = 0;
+
     for (let i = 0; i < num.length; i++) {
-        if (fn(num[i]) === false) {
-            return false;
+        if (fn(num[i])) {
+            isTrue++;
+        } else {
+            isFalse++;
         }
     }
-    return true;
+
+    if (num.length === isTrue) {
+        return true;
+    }
+    return false;
 }
 
 console.log(isAllTrue(allNum, isNumber));
