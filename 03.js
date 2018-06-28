@@ -1,10 +1,10 @@
 /*
 1. # ДЗ 1:
-Написать функцию '03', которая принимает 2 параметра - 'source' и 'filterFn'
+Написать функцию 'isAllTrue', которая принимает 2 параметра - 'source' и 'filterFn'
 source - массив
 'filterFn' - фильтрующая функция
-Если фильтрующая функция вернет 'true' для ВСЕХ элементов массива, то и сама '03' вернет 'true'
-Если фильтрующая функция вернет 'false' хотя бы для одного элемента массива, то и сама '03' вернет 'false'
+Если фильтрующая функция вернет 'true' для ВСЕХ элементов массива, то и сама 'isAllTrue' вернет 'true'
+Если фильтрующая функция вернет 'false' хотя бы для одного элемента массива, то и сама 'isAllTrue' вернет 'false'
 
 пример:
     var allNumbers = [1, 2, 4, 5, 6, 7, 8],
@@ -15,9 +15,9 @@ function isNumber(val) {
     return typeof val === 'number';
 }
 
-console.log(03(allNumbers, isNumber)); //вернет true
-console.log(03(someNumbers, isNumber)); //вернет false
-console.log(03(noNumbers, isNumber)); //вернет false
+console.log(isAllTrue(allNumbers, isNumber)); //вернет true
+console.log(isAllTrue(someNumbers, isNumber)); //вернет false
+console.log(isAllTrue(noNumbers, isNumber)); //вернет false
 
 Выбрасывать и обрабатывать исключение, если в 'source' пустой массив.
 */
@@ -27,7 +27,7 @@ function isNumber(val) {
     return typeof val === 'number';
 }
 
-function 03(num, fn) {
+function isAllTrue(num, fn) {
     try {
         if (num.length === 0) {
             throw new Error('Array is empty!');
@@ -61,7 +61,7 @@ let allNum = [1, 2, 3, 4, 5],
     emptyArr = [];
 
 
-console.log(03(allNum, isNumber));
-console.log(03(someNum, isNumber));
-console.log(03(notNum, isNumber));
-console.log(03(emptyArr, isNumber));
+console.log(isAllTrue(allNum, isNumber));
+console.log(isAllTrue(someNum, isNumber));
+console.log(isAllTrue(notNum, isNumber));
+console.log(isAllTrue(emptyArr, isNumber));
