@@ -58,7 +58,4 @@ function isAllTrue(num, fn) {
     return false;
 }
 
-console.log(isAllTrue(allNum, isNumber));
-console.log(isAllTrue(someNum, isNumber));
-console.log(isAllTrue(notNum, isNumber));
-console.log(isAllTrue(emptyArr, isNumber));
+module.exports = isAllTrue;
